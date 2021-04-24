@@ -5,24 +5,29 @@ import java.util.*;
 public class Main {
     public static void main(String[] args)
     {
-        System.out.println(getTimeMsOfInsert(new ArrayList()));
-        System.out.println(getTimeMsOfInsert(new LinkedList()));
-//        System.out.println(getTimeMsOfInsert(new HashMap<>()));
+        List<Integer> arrayList = new ArrayList<>();
+        List<Integer> linkedList = new LinkedList<>();
+        Set<Integer> hashSet = new HashSet<>();
+        SortedSet<Integer> treeSet = new TreeSet<>();
+        System.out.println(getTimeMsOfInsert(arrayList));
+        System.out.println(getTimeMsOfInsert(linkedList));
+        System.out.println(getTimeMsOfInsert(hashSet));
+        System.out.println(getTimeMsOfInsert(treeSet));
     }
-    public static long  getTimeMsOfInsert(List list)
+    public static long  getTimeMsOfInsert(Collection<Integer> collection)
     {
         Date timeBefore = new Date();
-        insert10000(list);
+        insert10000(collection);
 
         Date timeAfter = new Date();
         long msDelay = timeAfter.getTime() - timeBefore.getTime();
         return msDelay;
     }
-    public static void insert10000(List list)
+    public static void insert10000(Collection<Integer> collection)
     {
-        for (int i=0;i<10000;i++)
+        for (int i=0;i<100000;i++)
         {
-            list.add(0, new Object());
+            collection.add(i);
         }
     }
 }
