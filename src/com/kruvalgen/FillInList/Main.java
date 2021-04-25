@@ -2,6 +2,8 @@ package com.kruvalgen.FillInList;
 
 import java.util.*;
 
+//Заполнить ArrayList, LinkedList, SortedSet, HashMap 10000 элементов и посчитать за какое время это произойдет на вашей машине (тип любой)
+
 public class Main {
     public static void main(String[] args)
     {
