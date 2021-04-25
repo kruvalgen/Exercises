@@ -2,6 +2,7 @@ package com.kruvalgen.doubleList;
 
 import java.util.*;
 
+// List<String> doubleList = new ArrayList<>(); - убрать дубликаты из списка и вывести на экран в порядке ОБРАТНОЙ сортировки (можно сделать разными способами)
 public class Main {
     public static void main(String[] args) {
 
@@ -18,21 +19,13 @@ public class Main {
         doubleList.add("red");
         doubleList.add("orange");
 
-//        Set<String> set = new LinkedHashSet<>(doubleList);
-//        String[] rev = set.toArray(new String[set.size()]);               //ПЕРВЫЙ СПОСОБ
-//        for (int i = rev.length - 1; i >= 0 ; i--) {
-//            System.out.println(rev[i]);
-//        }
-
-        List<String> noRepeat = new ArrayList<>();
-        for (int i = 0; i < doubleList.size() - 1 ; i++) {
-            for (int j = i + 1; j < doubleList.size() ; j++) {
-                if(doubleList.get(i).equals(doubleList.get(j))){
-
-                }
-            }
-
+        Set<String> set = new LinkedHashSet<>(doubleList);
+        String[] rev = set.toArray(new String[set.size()]);               //ПЕРВЫЙ СПОСОБ
+        for (int i = rev.length - 1; i >= 0 ; i--) {
+            System.out.println(rev[i]);
         }
+
+
 
 
 
