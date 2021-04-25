@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+
+//написать консольный калькулятор который поддерживает операции (+ - * / =  ^(возвести в квадрат))
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -14,7 +16,12 @@ public class Main {
         calculator.setFirstNumber(Integer.parseInt(getOperator(reader)));
         System.out.println("Enter operator: ");
         calculator.setOperator(getOperator(reader));
-        System.out.println("Enter second number: ");
+
+        if(calculator.getOperator().equals("^")){
+            System.out.println("Enter the degree");
+        }else{
+            System.out.println("Enter second number: ");
+        }
         calculator.setSecondNumber(Integer.parseInt(getOperator(reader)));
 
         calculator.calculate();

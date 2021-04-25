@@ -6,23 +6,27 @@ public class Calculator {
     private double secondNumber;
     private String operator;
 
-    public void calculate(){
 
-        if(operator.equals("+")){
+    public void calculate() {
+
+        if (operator.equals("+")) {
             System.out.println(" = " + (firstNumber + secondNumber));
         }
-        if(operator.equals("-")){
+        if (operator.equals("-")) {
             System.out.println(" = " + (firstNumber - secondNumber));
         }
-        if(operator.equals("*")){
+        if (operator.equals("*")) {
             System.out.println(" = " + (firstNumber * secondNumber));
         }
-        if(operator.equals("/")){
+        if (operator.equals("/")) {
             System.out.println(" = " + (firstNumber / secondNumber) + (firstNumber % secondNumber));
         }
+        if (operator.equals("^")) {
+            System.out.println(" = " + Math.pow(firstNumber, secondNumber));
+
+        }
+
     }
-
-
     public double getFirstNumber() {
         return firstNumber;
     }
@@ -46,4 +50,5 @@ public class Calculator {
     public void setOperator(String operator) {
         this.operator = operator;
     }
+
 }
